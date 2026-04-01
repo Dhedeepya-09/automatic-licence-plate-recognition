@@ -8,3 +8,5 @@ numpy
 pillow
 pytz
 plotly
+torch
+torchvision
