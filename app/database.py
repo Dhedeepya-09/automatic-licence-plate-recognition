@@ -9,6 +9,8 @@ DB_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'vehicle_system.
 
 def init_db():
     """Initialize the database with tables and sample data."""
+    # Ensure the data directory exists
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
